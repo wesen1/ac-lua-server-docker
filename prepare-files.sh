@@ -1,10 +1,21 @@
 #!/bin/bash
 
-if [ ! -f "./release.zip" ]; then
-  wget https://github.com/wesen1/AC-Lua/releases/download/v1.0.0/release.zip
+target="$1"
+
+if [ "$target" == "local-lua" ]; then
+  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.0.1/AC-Lua-local-lua.zip"
+else
+  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.0.1/AC-Lua-lib-lua.zip"
 fi
 
-tmpOutputDirectory="./ac-lua-server"
+
+if [ -f "./release.zip" ]; then
+  rm "./release.zip"
+fi
+
+wget "$downloadUrl" -O "./release.zip"
+
+tmpOutputDirectory="./$target/ac-lua-server"
 if [ -d "$tmpOutputDirectory" ]; then
   rm -r "$tmpOutputDirectory"
 fi
