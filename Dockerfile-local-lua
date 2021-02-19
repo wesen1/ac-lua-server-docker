@@ -1,0 +1,5 @@
+FROM wesen1/assaultcube-server:1.2.0.2
+COPY ./copy-server-files.sh /copy-server-files.sh
+RUN apt-get update && \
+    /copy-server-files.sh "local-lua" && \
+    rm /copy-server-files.sh
