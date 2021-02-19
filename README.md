@@ -35,4 +35,6 @@ services:
 ## Build
 
 1. Run `apt-get install docker-compose`
-2. Run `./build.sh`
+2. Run one of the following commands:
+  * `docker build -t ac-lua-server-lib-lua . -f Dockerfile-lib-lua`
+  * `docker build -t ac-lua-server-local-lua . -f Dockerfile-local-lua`
