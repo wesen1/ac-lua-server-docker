@@ -9,9 +9,9 @@ apt-get install -y unzip
 
 # Find the download URL for the target AC-Lua release
 if [ "$target" == "local-lua" ]; then
-  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.1.2/AC-Lua-local-lua.zip"
+  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.2.0/AC-Lua-local-lua.zip"
 else
-  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.1.2/AC-Lua-lib-lua.zip"
+  downloadUrl="https://github.com/wesen1/AC-Lua/releases/download/v1.2.0/AC-Lua-lib-lua.zip"
 fi
 
 # Download AC-Lua
